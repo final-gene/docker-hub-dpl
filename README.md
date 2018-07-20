@@ -1,5 +1,5 @@
 # Dpl (dee-pee-ell)
-[![CircleCI](https://circleci.com/gh/final-gene/docker-hub-dpl/tree/master.svg?style=svg)](https://circleci.com/gh/final-gene/docker-hub-dpl/tree/master) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/4cf4be3e6d6540c0a1c0d72a239ae01b)](https://www.codacy.com/app/final-gene/docker-hub-dpl?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=final-gene/docker-hub-dpl&amp;utm_campaign=Badge_Grade)
+[![CircleCI](https://circleci.com/gh/final-gene/docker-hub-dpl/tree/master.svg?style=svg)](https://circleci.com/gh/final-gene/docker-hub-dpl/tree/master) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/e3872ddb77864b82bb0674ccaf5b5c55)](https://www.codacy.com/app/final-gene/docker-hub-dpl?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=final-gene/docker-hub-dpl&amp;utm_campaign=Badge_Grade)
 
 This is a image to run the [dpl command](https://github.com/travis-ci/dpl).
 
