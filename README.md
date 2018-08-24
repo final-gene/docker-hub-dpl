@@ -6,7 +6,8 @@ This is a image to run the [dpl command](https://github.com/travis-ci/dpl).
 [Dpl (dee-pee-ell)](https://github.com/travis-ci/dpl) is a deploy tool made for continuous deployment that's developed and used by Travis CI, but can also be used with any other CI.
 
 ## Supported tags and respective Dockerfile links
-* `1.9`, `latest` [(1.9/Dockerfile)](https://github.com/finalgene/docker-hub-dpl/blob/master/1.9/Dockerfile)
+* `1.10`, `latest` [(1.10/Dockerfile)](https://github.com/finalgene/docker-hub-dpl/blob/master/1.10/Dockerfile)
+* `1.9` [(1.9/Dockerfile)](https://github.com/finalgene/docker-hub-dpl/blob/master/1.9/Dockerfile)
 
 ## How to use this image
 Run the `dpl` image:
