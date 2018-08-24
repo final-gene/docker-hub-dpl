@@ -1,6 +1,6 @@
 NAME = dpl
 
-VERSIONS = 1.9
+VERSIONS = 1.9 1.10
 
 .PHONY: build
 build: ${VERSIONS}
