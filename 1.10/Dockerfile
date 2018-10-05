@@ -2,7 +2,7 @@ FROM ruby:2.4.4-alpine3.7
 
 LABEL maintainer="frank.giesecke@final-gene.de"
 
-ENV DPL_VERSION 1.10.2
+ENV DPL_VERSION 1.10.3
 
 RUN apk add --no-cache --virtual=.build-deps \
         build-base=0.5-r0
