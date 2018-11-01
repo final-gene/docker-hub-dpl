@@ -1,15 +1,15 @@
-FROM ruby:2.4.4-alpine3.7
+FROM ruby:2.5.3-alpine3.8
 
 LABEL maintainer="frank.giesecke@final-gene.de"
 
-ENV DPL_VERSION 1.10.3
+ENV DPL_VERSION 1.10.4
 
 RUN apk add --no-cache --virtual=.build-deps \
-        build-base=0.5-r0
+        build-base=0.5-r1
 
 RUN apk add --no-cache --virtual=.persistent\
         curl=7.61.1-r0 \
-        git=2.15.2-r0
+        git=2.18.1-r0
 
 # check available packages using `gem search dpl | grep dpl-`
 # ERROR:
