@@ -8,7 +8,7 @@ RUN apk add --no-cache --virtual=.build-deps \
         build-base=0.5-r1
 
 RUN apk add --no-cache --virtual=.persistent\
-        curl=7.61.1-r0 \
+        curl=7.61.1-r1 \
         git=2.18.1-r0
 
 # check available packages using `gem search dpl | grep dpl-`
