@@ -1,7 +1,7 @@
 version: 2
 
-.tempates:
-  .validate_template: &validate_template
+jobs:
+  validate:
     docker:
       -
         image: finalgene/hadolint:latest
@@ -13,8 +13,9 @@ version: 2
         run:
           name: Validate Dockerfile
           command: |
-            hadolint $VERSION/Dockerfile
-  .build_template: &build_template
+            hadolint Dockerfile
+
+  build:
     docker:
       -
         image: docker:18.05.0-ce-git
@@ -26,42 +27,18 @@ version: 2
         run:
           name: Build application Docker image
           command: |
-            docker build --tag dpl:$VERSION $VERSION/
+            docker build .
       -
         run:
           name: List created images
           command: |
             docker images
 
-jobs:
-  validate-1.9:
-    environment:
-      VERSION: "1.9"
-    <<: *validate_template
-  build-1.9:
-    environment:
-      VERSION: "1.9"
-    <<: *build_template
-
-  validate-1.10:
-    environment:
-      VERSION: "1.10"
-    <<: *validate_template
-  build-1.10:
-    environment:
-      VERSION: "1.10"
-    <<: *build_template
-
 workflows:
   version: 2
   validate_and_build:
     jobs:
-      - validate-1.9
-      - build-1.9:
+      - validate
+      - build:
           requires:
-            - validate-1.9
-
-      - validate-1.10
-      - build-1.10:
-          requires:
-            - validate-1.10
+            - validate
