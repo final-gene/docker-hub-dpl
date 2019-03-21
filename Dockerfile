@@ -1,8 +1,8 @@
-FROM ruby:2.4.5-alpine3.8
+FROM ruby:2.5.3-alpine3.8
 
 LABEL maintainer="frank.giesecke@final-gene.de"
 
-ENV DPL_VERSION=1.9.7
+ENV DPL_VERSION=1.10.6
 
 RUN apk add --no-cache --virtual=.build-deps \
         build-base=0.5-r1
