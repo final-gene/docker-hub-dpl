@@ -1,19 +1,22 @@
-FROM ruby:2.6.3-alpine3.9
+FROM ruby:2.6.3-alpine3.10
 
 LABEL maintainer="frank.giesecke@final-gene.de"
 
-ENV DPL_VERSION=1.10.8
+ENV DPL_VERSION=1.10.12
 
+# hadolint ignore=DL3018
 RUN apk add --no-cache --virtual=.build-deps \
-        build-base=0.5-r1
+        build-base
 
+# hadolint ignore=DL3018
 RUN apk add --no-cache --virtual=.persistent\
-        curl=7.64.0-r1 \
-        git=2.20.1-r0
+        curl \
+        git
 
 # check available packages using `gem search dpl | grep dpl-`
 # ERROR:
 # `dpl-connect` could not be installes as it conflicts with installed executable from dpl
+# hadolint ignore=DL3028
 RUN echo 'gem: --no-document' >> /etc/gemrc \
     && gem install \
         "dpl:${DPL_VERSION}" \
