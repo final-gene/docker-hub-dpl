@@ -1,8 +1,8 @@
-FROM ruby:2.6.3-alpine3.10
+FROM ruby:2.7.3-alpine3.13
 
 LABEL maintainer="frank.giesecke@final-gene.de"
 
-ENV DPL_VERSION=1.10.12
+ENV DPL_VERSION=1.10.16
 
 # hadolint ignore=DL3018
 RUN apk add --no-cache --virtual=.build-deps \
