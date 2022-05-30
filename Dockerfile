@@ -2,11 +2,9 @@ FROM ruby:2.7.5-alpine3.13
 
 LABEL maintainer="frank.giesecke@final-gene.de"
 
-# hadolint ignore=DL3018
 RUN apk add --no-cache --virtual=.build-deps \
         build-base
 
-# hadolint ignore=DL3018
 RUN apk add --no-cache --virtual=.persistent\
         curl \
         git
@@ -14,7 +12,6 @@ RUN apk add --no-cache --virtual=.persistent\
 # check available packages using `gem search dpl | grep dpl-`
 # ERROR:
 # `dpl-connect` could not be installes as it conflicts with installed executable from dpl
-# hadolint ignore=DL3028
 RUN echo 'gem: --no-document' >> /etc/gemrc \
     && gem install \
         dpl \
