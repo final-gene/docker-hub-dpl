@@ -2,8 +2,6 @@ FROM ruby:2.7.5-alpine3.13
 
 LABEL maintainer="frank.giesecke@final-gene.de"
 
-ENV DPL_VERSION=1.10.16
-
 # hadolint ignore=DL3018
 RUN apk add --no-cache --virtual=.build-deps \
         build-base
@@ -19,7 +17,7 @@ RUN apk add --no-cache --virtual=.persistent\
 # hadolint ignore=DL3028
 RUN echo 'gem: --no-document' >> /etc/gemrc \
     && gem install \
-        "dpl:${DPL_VERSION}" \
+        dpl \
         dpl-anynines \
         dpl-atlas \
         dpl-azure_webapps \
