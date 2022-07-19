@@ -1,4 +1,4 @@
-FROM ruby:2.7.5-alpine3.13
+FROM ruby:3.0.3-alpine3.13
 
 LABEL maintainer="frank.giesecke@final-gene.de"
 
