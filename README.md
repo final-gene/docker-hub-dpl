@@ -1,6 +1,8 @@
 # Dpl (dee-pee-ell)
 
-This is a image to run the [dpl command](https://github.com/travis-ci/dpl).
+[![Docker build and publish](https://github.com/final-gene/docker-hub-dpl/actions/workflows/publish.yml/badge.svg)](https://github.com/final-gene/docker-hub-dpl/actions/workflows/publish.yml)
+
+This is an image to run the [dpl command](https://github.com/travis-ci/dpl).
 
 [Dpl (dee-pee-ell)](https://github.com/travis-ci/dpl) is a deploy tool made for continuous deployment that's developed and used by Travis CI, but can also be used with any other CI.
 
